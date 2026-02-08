@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Mannu 💖</title>
+<style>
+body{margin:0;height:100vh;background:linear-gradient(135deg,#ff4e8d,#ff9aa2);display:flex;justify-content:center;align-items:center;font-family:'Poppins',sans-serif;overflow:hidden;color:white}
+.heart{position:absolute;bottom:-20px;font-size:22px;animation:floatUp 6s linear infinite;opacity:.85}
+@keyframes floatUp{0%{transform:translateY(0) scale(1);opacity:1}100%{transform:translateY(-120vh) scale(1.6);opacity:0}}
+.side{position:absolute;font-size:14px;opacity:.7;animation:sideFloat 8s linear infinite}
+@keyframes sideFloat{0%{transform:translateY(0);opacity:0}20%{opacity:.8}100%{transform:translateY(-100vh);opacity:0}}
+.card{background:rgba(255,255,255,.22);backdrop-filter:blur(14px);padding:34px;border-radius:30px;text-align:center;max-width:390px;box-shadow:0 20px 45px rgba(0,0,0,.35);animation:pop 1.2s ease}
+@keyframes pop{0%{transform:scale(0)}100%{transform:scale(1)}}
+h1{font-size:32px;margin-bottom:12px}
+p{font-size:16px;line-height:1.8}
+.type{border-right:2px solid rgba(255,255,255,.8);white-space:nowrap;overflow:hidden;animation:typing 4s steps(40,end),blink .8s infinite}
+@keyframes typing{from{width:0}to{width:100%}}
+@keyframes blink{50%{border-color:transparent}}
+button{margin-top:22px;padding:14px 32px;border:none;border-radius:30px;background:white;color:#ff2f7a;font-size:16px;font-weight:bold;cursor:pointer;animation:pulse 1.6s infinite}
+@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.1)}100%{transform:scale(1)}}
+#proposal{display:none;margin-top:18px;font-size:18px;font-weight:bold;animation:fadeIn 1.5s ease forwards}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+iframe{display:none}
+</style>
+</head>
+<body>
+<iframe src="https://www.youtube.com/embed/nyuo9-OjNNg?autoplay=1&loop=1&playlist=nyuo9-OjNNg" allow="autoplay"></iframe>
+<div class="card">
+<h1>Mannu 💖</h1>
+<p class="type">Jab tum paas hoti ho,<br>duniya khud-ba-khud khoobsurat lagti hai ✨</p>
+<p>Main perfect nahi hoon,<br>par tumhare saath rehna chahta hoon —<br>har din, har kahani mein 💞</p>
+<button onclick="askLove()">Tap here 💝</button>
+<div id="proposal">Will you be mine… forever? 💍❤️</div>
+<p style="margin-top:18px;font-size:14px;">— Always yours, <b>Shiva ❤️</b></p>
+</div>
+<script>
+function askLove(){document.getElementById("proposal").style.display="block";}
+for(let i=0;i<36;i++){let h=document.createElement("div");h.className="heart";h.innerHTML="💖";h.style.left=Math.random()*100+"vw";h.style.animationDuration=(4+Math.random()*4)+"s";document.body.appendChild(h);}
+const words=["your boy 💙","my girl 💖","forever ♾️","only you ✨","mine ❤️","us 💑"];
+for(let i=0;i<20;i++){let s=document.createElement("div");s.className="side";s.innerHTML=words[Math.floor(Math.random()*words.length)];s.style.left=Math.random()*100+"vw";s.style.bottom="-20px";s.style.animationDuration=(6+Math.random()*4)+"s";document.body.appendChild(s);}
+</script>
+</body>
+</html>
